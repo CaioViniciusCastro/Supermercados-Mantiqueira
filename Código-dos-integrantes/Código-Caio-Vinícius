@@ -1,61 +1,55 @@
-Console.WriteLine();
-
-
-/* switch (Forma_pagamento)
+class Program
 {
-    case 1:
-
-        break;
-
-    case 2:
-
-        break;
-
-    case 3:
-
-        break;
-
-    case 4:
-
-        break;
-
-    default: Console.WriteLine("Erro Processo cancelado.");
+    static void Main(string[] args)
+    {
+        FormasPagamento a = new FormasPagamento();
+        Console.WriteLine("ABA DE PAGAMENTOS:");
+        Console.WriteLine($"Valor total de sua compra: {XXX}$"); //inserir variavel contendo o dinheiro total
+        Console.WriteLine();
+        Console.WriteLine("Como o senhor deseja pagar? \n(1-Cartão de crédito) \n(2-Cartão de débito)\n(3-Dinheiro)\n(4-Pix)");
+        a.Forma_pagamento = int.Parse(Console.ReadLine());
+        FormasPagamento.Pagamento(a.Forma_pagamento);
+        Console.ReadLine();
+    }
 }
 
-//fazer uma função para cada forma de pagamento, e para opção de querer dividir em x vezes
 
-
-
-using System;
 
 public class FormasPagamento
 {
+    public int Forma_pagamento { get; set; }
 
-	public int Forma_pagamento
+    
+    
+    public static string Pagamento(int Forma_pagamento)
+    {
+        switch (Forma_pagamento) { 
 
-	public Pagamento()
-	{
-		Console.WriteLine("Como o senhor deseja pagar? \n(1-Cartão de crédito) \n(2-Cartão de débito)\n(3-Dinheiro)\n(4-Pix)");
-		Forma_pagamento = int.Parse(Console.ReadLine());
-        switch (Forma_pagamento)
-        {
             case 1:
-                Console.WriteLine(CartaoCredito.Cartao());
-                break;
-
-            case 2;
-                Console.WriteLine(CartaoDebito.Cartao());
-                break;
+                return "Insira sua senha.\n" +
+                    "283249-999" +
+                CartaoCredito.Cartao();
+ 
+            case 2:
+                return"Insira sua senha.\n" +
+                    "3233" +
+                CartaoDebito.Cartao();
+                
 
             case 3:
-                Console.WriteLine(Dinheiro.Vista());
-                break;
+                return "Pague seu dinheiro. \n" + 
+                Dinheiro.Preco();
+                
 
             case 4:
-                Console.Write(Pix.Codigo());
-                break;
+                return "Insira nosso CPF.\n" +
+                Pix.CPF();
+         
 
+            default:
+                return "Forma de pagamento invalida.";         
         }
+    }
 }
 
 
@@ -64,30 +58,67 @@ using System;
 
 public class CartaoCredito
 {
-	public int Senha { private get; set; }
-	public char Resposta_divisao { get; set; }
-	public int Resposta_qtd_meses { get; set; }
 
-	public Cartao()
-	{
-		Console.WriteLine("Insira sua senha:");
-		Senha = int.Parse(Console.ReadLine());
-		Chance_erro = random.Next(0.9);
-		if(Chance_erro > (0.9){
-			Console.WriteLine("Você não tem créditos o suficiente.");
-		}
-		else
-		{
-			Console.WriteLine("Pagamento aprovado.");
-		}
-	}
+    private static Random random = new Random();
 
-	public Dividir()
-	{
-		Console.WriteLine("O senhor deseja dividir?(s/n)")
-			Resposta_divisao = char.Parse(Console.ReadLine());
-		if (Resposta_divisao == s)
-			Console.WriteLine("De quantas vezes o senhor deseja dividir sua compra? (máximo 8 vezes.)")
-				Resposta_qtd_meses = int.parse(Console.ReadLine());
-	}
+
+    public static string Cartao()
+    {
+        int Chance_erro = random.Next(10);
+        if (Chance_erro == 1)
+        {
+            return "Você não tem créditos o suficiente.";
+        }
+        else
+        {
+            return "Pagamento aprovado.";
+        }
+    }
+}
+
+
+
+using System;
+
+public class CartaoDebito
+{
+
+    private static Random random = new Random();
+
+
+        public static string Cartao()
+        {
+
+            int Chance_erro = random.Next(10);
+            if (Chance_erro == 1)
+            {
+                return "Você não tem débito o suficiente.";
+            }
+            else
+            {
+                return "Pagamento aprovado.";
+            }
+
+        }    
+}
+
+
+
+public class Dinheiro
+{
+
+
+    public static string Preco(){
+        return $"Pague-nos o valor de {XXX}$"; //inserir variavel do dinheiro total;
+        }
+}
+
+
+
+public class Pix
+{
+
+    public static string CPF(){
+        return "Insira nosso cpf no seu aplicativo - 12333-21568";
+    }
 }
