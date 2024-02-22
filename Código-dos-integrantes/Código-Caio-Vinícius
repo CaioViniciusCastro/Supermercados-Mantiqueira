@@ -1,1 +1,93 @@
+Console.WriteLine();
 
+
+/* switch (Forma_pagamento)
+{
+    case 1:
+
+        break;
+
+    case 2:
+
+        break;
+
+    case 3:
+
+        break;
+
+    case 4:
+
+        break;
+
+    default: Console.WriteLine("Erro Processo cancelado.");
+}
+
+//fazer uma função para cada forma de pagamento, e para opção de querer dividir em x vezes
+
+
+
+using System;
+
+public class FormasPagamento
+{
+
+	public int Forma_pagamento
+
+	public Pagamento()
+	{
+		Console.WriteLine("Como o senhor deseja pagar? \n(1-Cartão de crédito) \n(2-Cartão de débito)\n(3-Dinheiro)\n(4-Pix)");
+		Forma_pagamento = int.Parse(Console.ReadLine());
+        switch (Forma_pagamento)
+        {
+            case 1:
+                Console.WriteLine(CartaoCredito.Cartao());
+                break;
+
+            case 2;
+                Console.WriteLine(CartaoDebito.Cartao());
+                break;
+
+            case 3:
+                Console.WriteLine(Dinheiro.Vista());
+                break;
+
+            case 4:
+                Console.Write(Pix.Codigo());
+                break;
+
+        }
+}
+
+
+
+using System;
+
+public class CartaoCredito
+{
+	public int Senha { private get; set; }
+	public char Resposta_divisao { get; set; }
+	public int Resposta_qtd_meses { get; set; }
+
+	public Cartao()
+	{
+		Console.WriteLine("Insira sua senha:");
+		Senha = int.Parse(Console.ReadLine());
+		Chance_erro = random.Next(0.9);
+		if(Chance_erro > (0.9){
+			Console.WriteLine("Você não tem créditos o suficiente.");
+		}
+		else
+		{
+			Console.WriteLine("Pagamento aprovado.");
+		}
+	}
+
+	public Dividir()
+	{
+		Console.WriteLine("O senhor deseja dividir?(s/n)")
+			Resposta_divisao = char.Parse(Console.ReadLine());
+		if (Resposta_divisao == s)
+			Console.WriteLine("De quantas vezes o senhor deseja dividir sua compra? (máximo 8 vezes.)")
+				Resposta_qtd_meses = int.parse(Console.ReadLine());
+	}
+}
