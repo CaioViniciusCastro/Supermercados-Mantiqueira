@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\limaj\\Desktop\\C#\\ProjetoC#\\ProjetoC#.csproj",
+      "projectUniqueName": "C:\\Users\\limaj\\Documents\\GitHub\\Supermercados-Mantiqueira\\Supermercados-Mantiqueira\\Código-dos-integrantes\\ProjetoC#\\ProjetoC#.csproj",
       "projectName": "ProjetoC#",
-      "projectPath": "C:\\Users\\limaj\\Desktop\\C#\\ProjetoC#\\ProjetoC#.csproj",
+      "projectPath": "C:\\Users\\limaj\\Documents\\GitHub\\Supermercados-Mantiqueira\\Supermercados-Mantiqueira\\Código-dos-integrantes\\ProjetoC#\\ProjetoC#.csproj",
       "packagesPath": "C:\\Users\\limaj\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\limaj\\Desktop\\C#\\ProjetoC#\\obj\\",
+      "outputPath": "C:\\Users\\limaj\\Documents\\GitHub\\Supermercados-Mantiqueira\\Supermercados-Mantiqueira\\Código-dos-integrantes\\ProjetoC#\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\limaj\\AppData\\Roaming\\NuGet\\NuGet.Config"

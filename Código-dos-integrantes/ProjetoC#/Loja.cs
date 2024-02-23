@@ -1,22 +1,22 @@
 namespace ProjetoC_
 {
-    public class Loja
+    class Loja
+{
+    private List<Produto> listaDeProdutos;
+
+    public Loja(List<Produto> produtos)
     {
-        private List<Produto> listaDeProdutos;
+        listaDeProdutos = produtos;
+    }
 
-        public Loja(List<Produto> produtos)
+    public void MostrarProdutos()
+    {
+        Console.WriteLine("Lista de Produtos:");
+        foreach (var produto in listaDeProdutos)
         {
-            listaDeProdutos = produtos;
+            Console.WriteLine($"Produto: {produto.Nome} - Preço: R${produto.Preco} - Quantidade: {produto.Quantidade}");
         }
-
-        public void MostrarProdutos()
-        {
-            Console.WriteLine("Lista de Produtos:");
-            foreach (var produto in listaDeProdutos)
-            {
-                Console.WriteLine($"Produto: {produto.Nome} - Preço: R${produto.Preco} - Quantidade: {produto.Quantidade}");
-            }
-        }
+    }
 
         public void ProcessarCompra()
         {
@@ -26,7 +26,7 @@ namespace ProjetoC_
                 Console.WriteLine("\nDeseja comprar algum produto? (Sim/Não)");
                 resposta = Console.ReadLine();
 
-                if (resposta.ToLower() == "Sim")
+                if (resposta == "Sim")
                 {
                     MostrarProdutos();
 
@@ -41,7 +41,8 @@ namespace ProjetoC_
                         if (quantidadeCompra <= listaDeProdutos[escolhaProduto].Quantidade)
                         {
                             listaDeProdutos[escolhaProduto].Quantidade -= quantidadeCompra;
-                            Console.WriteLine($"Compra realizada com sucesso! Total: R${listaDeProdutos[escolhaProduto].Preco * quantidadeCompra}");
+                           double totalCompra = listaDeProdutos[escolhaProduto].Preco * quantidadeCompra;
+                            Console.WriteLine($"Compra realizada com sucesso! Total: R${totalCompra}");
                             Console.WriteLine($"Estoque atual de {listaDeProdutos[escolhaProduto].Nome}: {listaDeProdutos[escolhaProduto].Quantidade}");
                         }
                         else

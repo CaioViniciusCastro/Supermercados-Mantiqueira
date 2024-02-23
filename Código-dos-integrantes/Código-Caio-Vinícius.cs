@@ -1,10 +1,10 @@
-class Program
+class Confirmacao : Program
 {
     static void Main(string[] args)
     {
         FormasPagamento a = new FormasPagamento();
         Console.WriteLine("ABA DE PAGAMENTOS:");
-        Console.WriteLine($"Valor total de sua compra: {XXX}$"); //inserir variavel contendo o dinheiro total
+        Console.WriteLine($"Valor total de sua compra: {listaDeProdutos[escolhaProduto].Preco * quantidadeCompra}$"); //inserir variavel contendo o dinheiro total
         Console.WriteLine();
         Console.WriteLine("Como o senhor deseja pagar? \n(1-Cartão de crédito) \n(2-Cartão de débito)\n(3-Dinheiro)\n(4-Pix)");
         a.Forma_pagamento = int.Parse(Console.ReadLine());
